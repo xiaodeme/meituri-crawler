@@ -29,8 +29,7 @@ def get_img_info(url):
     :return:
     """
     logging.info("正在获取图集下载信息:%s" % (url))
-    data = access_data_utils.access_url(url)
-
+    data = access_data_utils.get_html_data(url)
     # with open("F:/images/index/28539.html") as f:
     #     data = f.read()
 
@@ -92,7 +91,9 @@ if __name__ == '__main__':
 
     print("图集正确地址查看:%s" %(index_url))
     print("图集正确输入地址:%s"  % ("https://www.meituri.com/a/22523/"))
+    # href = 'https://www.meituri.com/a/22523/'
     href = raw_input('请输入图集下载类型：')
+
 
     print("您输入的图集地址是:%s" % (href))
     print("当前图集保存文件夹:%s " % (root_path))
