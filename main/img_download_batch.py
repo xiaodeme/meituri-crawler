@@ -30,7 +30,7 @@ def get_img_list(url):
     :return:
     """
     logging.info("准备开始图集下载:%s:" %(url))
-    data = access_data_utils.access_url(url)
+    data = access_data_utils.get_html_data(url)
     img_list = []
     selector = html.fromstring(data)
     p_text_list = selector.xpath('.//div[@class="hezi"]/ul/li/a')

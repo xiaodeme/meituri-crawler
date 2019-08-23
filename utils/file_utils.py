@@ -43,7 +43,7 @@ def get_img_type_list(index_url):
     """
     # 这里将首页保存到了本地，可直接解析
     logging.info("正在解析首页:%s，获取图集分类地址,请稍等..." %(index_url))
-    data = access_data_utils.access_url(index_url)
+    data = access_data_utils.get_html_data(index_url)
     img_list=[]
     img_list_info = {}
     index = 1
